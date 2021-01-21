@@ -1,0 +1,9 @@
+p {
+	background-color: DarkGreen;
+	color: White;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 75px;
+	text-align: right;
+	text-shadow: 30px 30px Crimson;
+}

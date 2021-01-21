@@ -1,0 +1,15 @@
+table {
+	border: 10px  solid Crimson;
+}
+td:hover {
+	background-color: Cornsilk;
+	color: LightCoral;
+}
+tr,th {
+	background-color: MediumSeaGreen;
+	color: MintCream;
+}
+tr,td {
+	background-color: SlateGrey;
+	color: Azure;
+}
