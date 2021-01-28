@@ -1,0 +1,436 @@
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 65%;
+}
+
+h1 {
+    text-align: center;
+    font-variant: small-caps;
+    font-size: large;
+    background-size: 10%;
+    border: 7px groove coral;
+    border-radius: 8px;
+    background: mediumspringgreen;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+h1::after { 
+    display: block;
+    content: "";
+    height: 2px;
+    width: 150px;
+    background: coral;
+    margin: 5px auto 40px;
+    box-shadow: 5px 2px 3px rgba(0, 0, 0, 0.5);
+}
+nav {
+    display: inline-block;
+}
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.heading-padding {
+    padding-bottom: 40px;
+}
+
+.wrap {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+.menu-container {
+    max-height: 340px;
+    margin: 0% auto;
+    content: " ";
+
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+.menu {
+    color: darkgreen;
+    font: bold 12px/18px Verdana;
+    text-align: center;
+    display: inline;
+    margin: 0% auto;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.menu li {
+    color: #000;
+    background-color: cornflowerblue;
+    display: inline-table;
+    margin: 0% auto;
+    position: relative;
+    padding: 15px 4%;
+    border: 1px solid #9d9fa2;
+    box-shadow: 2px 2px 10px 0 rgba(0,0,0,0.5);
+    border-radius: 6px;
+    cursor: pointer;
+    transition-property: background;
+    transition-duration: .4s;
+    transition-delay: 0s;
+    transition-timing-function: ease-in-out;
+}
+
+.menu li:hover {
+    color: green;
+    background-color: mediumseagreen;
+}
+
+#gallery {
+    width: 100%;
+    display: block;
+    height: auto;
+    color: coral;
+    background: url(../images/dog_bone.jpg) no-repeat 50% 50%;
+    background-attachment: fixed;
+    background-size: cover;
+    text-shadow: 5px 1px 10px #000;
+    font-weight: 600;
+
+}
+
+#home {
+    background: url(../images/dog_bone.jpg) no-repeat 50% 50%;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    display: inline-block;
+    height: auto;
+    padding-top: 350px; 
+    padding-bottom: 500px; 
+    color: coral;
+}
+
+#video {
+    width: 100%;
+    display: block;
+    height: auto;
+    color: coral;
+    background: url(../images/dog_bone.jpg) no-repeat 50% 50%;
+    background-attachment: fixed;
+    background-size: cover;
+    text-shadow: 5px 1px 10px #000;
+    font-weight: 600;
+    
+}
+
+#contact {
+    width: 100%;
+    display: block;
+    height: auto;
+    color: coral;
+    background: url(../images/dog_bone.jpg) no-repeat 50% 50%;
+    background-attachment: fixed;
+    background-size: cover;
+    text-shadow: 5px 1px 10px #000;
+    font-weight: 600;
+}
+
+
+.head-main {
+    text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.9);
+    font-variant: small-caps;
+    color: cornflowerblue;
+    letter-spacing: 5pt;
+    word-spacing: 21pt;
+    font-size: 7.5em;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 2;
+    font-weight: 900;
+    border: 8px groove coral;
+    padding: 10px;
+    background: mediumspringgreen;
+}
+
+.head-sub-main {
+    font-size: 23px;
+    font-weight: 500;
+    padding: 50px 20px 10px 20px;
+    text-transform: uppercase;
+}
+
+.head-last {
+    font-size: 18px;
+    font-weight: 900;
+    padding: 5px 20px 20px 20px;
+    border: 1px groove coral;
+    padding: 5px;
+}
+
+p {
+    font-weight: 300;
+    line-height: 30px;
+    padding-bottom: 15px;
+}
+/*=====
+Gallery
+====*/
+.photo {
+    position: relative;
+    line-height: 0;
+    margin-bottom: 2em;
+    overflow: hidden;
+    border-radius: 8px;
+    padding: 1px;
+    border: 1px solid #021a40;
+    background-color: #ff0;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+}
+
+.photo-container {
+    text-align: center;
+    margin: 15px auto;
+    width: 300px;
+    height: 169px;
+}
+
+.photo-container img {
+    max-width: 100%;
+    width: 300px;
+    height: 169px;
+}
+
+.photo-overlay {
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: center; 
+    align-items: center;
+    background: rgba(0,0,0, .5);
+}
+
+
+/* ========================
+photo overlay transitions
+========================== */
+
+.photo-overlay {
+    opacity: 0;
+    transition: opacity .1s;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.photo-overlay p {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+.photo-overlay:hover {
+    opacity: 1;
+}
+
+.photo img {
+    transition: transform .5s;
+    transform-origin: 50% 50%;
+}
+
+.photo:hover img {
+    transform: scale(1.1);
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.flex-container {
+    display: -webkit-grid;
+    display: grid;
+    flex-wrap: wrap;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 0px auto;
+    background-color: rgba(100,65,0,.3);
+    box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+/*========
+Contact
+======*/
+#contact {
+    background-color: seagreen;
+}
+
+.subscribe {
+    width: 60%;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 0px auto;
+    background-color: rgba(100,65,0,.3);
+    box-shadow: -1px -1px 1px 0 rgba(0, 0, 0, 0.1), 1px 2px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.subscribe h2 {
+    width: 70%;
+    text-align: center;
+    margin: 0px auto;
+    color: seashell;
+    font-weight: 500;
+    font-size: 1.3em;
+    letter-spacing: 0pt;
+    word-spacing: 0pt;
+}
+
+.subscribe h2 span {
+    width: 70%;
+    text-align: center;
+    margin: 0px auto;
+    color: seashell;
+    font-weight: 900;
+    font-size: 1.5em;
+    font-variant: small-caps;
+    letter-spacing: .4pt;
+    word-spacing: .3pt; 
+}
+
+.subscribe p {
+    color: cornsilk;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.subscribe form {
+    font-size: 15px;
+    outline: none;
+    font-weight: 600;
+    color: coral;
+    padding: 12px 12px;
+    width: 70%;
+    border: 1px solid #8d8d80;
+    margin: 2% auto;
+    border-radius: 7px;
+    background: rgb(227,222,222);
+    box-shadow: 2px 3px 3px 0px rgba(0, 0, 0, 0.3);
+    font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+}
+
+.subscribe input[type="text"] {
+    font-size: 15px;
+    outline: none;
+    font-weight: 600;
+    color:coral;
+    padding: 2% 1% 2% 7%;
+    width: 80%;
+    border-top: 1px solid #090b0d;
+    border-right: 2px solid #424549;
+    border-bottom: 2px solid #424549;
+    border-left: 1px solid #090b0d;
+    margin: 10px 1em;
+    border-radius: 7px;
+    background: #13161b;
+    box-shadow: inset 0px 3px 0px 0px seagreen;
+    font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+}
+
+.subscribe input[type="text"]:hover {
+    box-shadow: 30px 39px;
+}
+
+.form-spacer {
+    padding: 30px 39px;
+}
+
+.terms {
+    margin: 30px 1px 0 0;
+    padding-left: 52px;
+    font-size: 14px;
+    line-height: 5px;
+    color: darkslategray;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+    font-weight: 600;
+    margin-top: 13%;
+    position: relative;
+    display: inline;
+    float: right;
+}
+
+.terms:hover {
+    color: goldenrod;
+    text-decoration: underline;
+}
+
+.submit input[type="submit"] {
+    color: seashell;
+    cursor: pointer;
+    border: none;
+    font-weight: 900;
+    outline: none;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+    margin: 0px 3%;
+    padding: 7px 0px;
+    width: 25%;
+    font-size: 18px;
+    transition: border-color 0.3s color 0.3s background-color 0.3s;
+    border-radius: 7px;
+    background-color: cornflowerblue;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+.submit input[type="submit"]:hover {
+    color: #000;
+    background-color: seagreen;
+    box-shadow: inset 1px 2px 15px 0 rgba(0, 0, 0, 0.5);
+}
+
+/*====
+Footer
+=====*/
+.footer {
+    font-weight: bold;
+    color: mediumseagreen;
+}
