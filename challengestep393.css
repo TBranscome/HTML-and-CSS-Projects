@@ -1,0 +1,151 @@
+/*===
+img style
+===*/
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+img {
+    filter: grayscale(100%);
+    border-radius: 15px;
+}
+.text {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: ghostwhite;
+    font-weight: bold;
+    font-size: 50px;
+}
+/*===
+table style
+===*/
+table {
+    border: darkgoldenrod 10px solid;
+}
+td {
+    padding: 50px;
+    border: darkslateblue 5px dotted;
+}
+th {
+    background-color: darkgreen;
+    border: darksalmon 3px solid;
+    color: deeppink;
+}
+.center-table {
+    margin-left: auto;
+    margin-right: auto;
+}
+/*===
+nav
+===*/
+.navbar {
+    overflow: hidden;
+    background-color: springgreen;
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 100;
+  }
+.navbar a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navbar a:hover {
+    background: darkslateblue;
+    color: black;
+}
+.main {
+    margin-top: 130px;
+    font-size: x-large;
+    color: darkviolet;
+    background-color: deepskyblue;
+}
+.position-nav {
+    margin-left: 50%;
+    margin-right: 50%;
+}
+/*===
+column
+===*/
+.row {
+    display: flex;
+    border: deepskyblue 9px solid;
+    border-radius: 7px;
+    margin-left: 500px;
+    margin-right: 500px;
+}
+
+.column1 {
+    flex: 50%;
+    background-color: firebrick;
+    text-align: left;
+    height: 50px;
+    width: 90px;
+    color: floralwhite;
+    font-size: x-large;
+}
+.column2 {
+    flex: 50%;
+    background-color: dimgray;
+    text-align: left;
+    height: 50px;
+    width: 90px;
+    color: gold;
+    font-size: x-large;
+}
+/*===
+hover
+===*/
+.sel:hover {
+    color: indigo;
+    background-color: lightcoral;
+}
+/*===
+image overlay fade
+===*/
+.container {
+    position: relative;
+    width: 50%;
+}
+
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+
+.container:hover .image {
+    opacity: 0.3;
+}
+
+.container:hover .middle {
+    opacity: 1;
+}
+
+.text1 {
+    background-color: mediumaquamarine;
+    color: darksalmon;
+    font-size: 16px;
+    padding: 16px 32px;
+}
