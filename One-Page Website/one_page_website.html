@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title>The Adventures of Ice Cream</title>
 		<link rel="stylesheet" href="./css/one_page_website.css">
+		<script src="./JS/one_page_website.js"></script>
 	</head>
 	<body>
 	
@@ -34,116 +35,85 @@
 		<section>
 			<div id="gallery">
 				<h1>Gallery</h1>
-				<div class="container">
+				<!-- Images used to open the lightbox -->
+				<div class="row">
+					<div class="column">
+					<img src="images/thumbs/thumbnail_1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow" width="200px" height="200px">
+					</div>
+					<div class="column">
+					<img src="images/thumbs/thumbnail_6.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow" width="200px" height="200px">
+					</div>
+					<div class="column">
+					<img src="images/thumbs/thumbnail_3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow" width="200px" height="200px">
+					</div>
+					<div class="column">
+					<img src="images/thumbs/thumbnail_5.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow" width="200px" height="200px">
+					</div>
+					<div class="column">
+						<img src="images/thumbs/thumbnail_7.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow" width="200px" height="200px">
+						</div>
+				</div>
 				
-					<!-- PHOTO CONTAINER 1 -->
-					<div class="photo-container">
-						<div class="photo">
-							<img src="./images/thumbs/thumbnail_1.jpg"  alt="The Ambassador">
-							<div class="photo-overlay">
-								<h3>Click to Enlarge</h3>
-								<p>The Ambassador</p>
-							</div>
-						</div>
+				<!-- The Modal/Lightbox -->
+				<div id="myModal" class="modal">
+					<span class="close cursor" onclick="closeModal()">&times;</span>
+					<div class="modal-content">
+				
+					<div class="mySlides">
+						<div class="numbertext">1 / 5</div>
+						<img src="images/thumbs/thumbnail_1.jpg" style="width:100%">
 					</div>
-					<!-- END PHOTO CONTAINER 1 -->
-					
-					<!-- PHOTO CONTAINER 2 -->
-					<div class="photo-container">
-						<div class="photo">
-							<img src="./images/thumbs/thumbnail_2.jpg"  alt="Red harness">
-							<div class="photo-overlay">
-								<h3>Click to Enlarge</h3>
-								<p>Coming back from a walk</p>
-							</div>
-						</div>
+				
+					<div class="mySlides">
+						<div class="numbertext">2 / 5</div>
+						<img src="images/thumbs/thumbnail_6.jpg" style="width:100%">
 					</div>
-					<!-- END PHOTO CONTAINER 2 -->
-					
-					<!-- PHOTO CONTAINER 3 -->
-					<div class="photo-container">
-						<div class="photo">
-							<img src="./images/thumbs/thumbnail_3.jpg"  alt="Tablet">
-							<div class="photo-overlay">
-								<h3>Click to Enlarge</h3>
-								<p>Sweet on the kids</p>
-							</div>
-						</div>
+				
+					<div class="mySlides">
+						<div class="numbertext">3 / 5</div>
+						<img src="images/thumbs/thumbnail_3.jpg" style="width:100%">
 					</div>
-					<!-- END PHOTO CONTAINER 3 -->
-					
-					<!-- PHOTO CONTAINER 4 -->
-					<div class="photo-container">
-						<div class="photo">
-							<img src="./images/thumbs/thumbnail_4.jpg"  alt="Stare down">
-							<div class="photo-overlay">
-								<h3>Click to Enlarge</h3>
-								<p>First to blink loses!</p>
-							</div>
-						</div>
+				
+					<div class="mySlides">
+						<div class="numbertext">4 / 5</div>
+						<img src="images/thumbs/thumbnail_5.jpg" style="width:100%">
 					</div>
-					<!-- END PHOTO CONTAINER 4 -->
-					
-					<!-- PHOTO CONTAINER 5 -->
-					<div class="photo-container">
-						<div class="photo">
-							<img src="./images/thumbs/thumbnail_5.jpg"  alt="Ears">
-							<div class="photo-overlay">
-								<h3>Click to Enlarge</h3>
-								<p>Do you have treats?</p>
-							</div>
-						</div>
+
+					<div class="mySlides">
+						<div class="numbertext">5 / 5</div>
+						<img src="images/thumbs/thumbnail_7.jpg" style="width:100%">
 					</div>
-					<!-- END PHOTO CONTAINER 5 -->
-					
-					<!-- PHOTO CONTAINER 6 -->
-					<div class="photo-container">
-						<div class="photo">
-							<img src="./images/thumbs/thumbnail_6.jpg"  alt="Floral">
-							<div class="photo-overlay">
-								<h3>Click to Enlarge</h3>
-								<p>Casual Fridays!!!</p>
-							</div>
-						</div>
+				
+					<!-- Next/previous controls -->
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+				
+					<!-- Caption text -->
+					<div class="caption-container">
+						<p id="caption"></p>
 					</div>
-					<!-- END PHOTO CONTAINER 6 -->
-					
-					<!-- PHOTO CONTAINER 7 -->
-					<div class="photo-container">
-						<div class="photo">
-							<img src="./images/thumbs/thumbnail_7.jpg"  alt="Attention">
-							<div class="photo-overlay">
-								<h3>Click to Enlarge</h3>
-								<p>Undivided Attention</p>
-							</div>
-						</div>
+				
+					<!-- Thumbnail image controls -->
+					<div class="column">
+						<img class="demo" src="images/thumbs/thumbnail_1.jpg" onclick="currentSlide(1)" alt="Ambassador" width="200px">
 					</div>
-					<!-- END PHOTO CONTAINER 7 -->
-					
-					<!-- PHOTO CONTAINER 8 -->
-					<div class="photo-container">
-						<div class="photo">
-							<img src="./images/thumbs/thumbnail_8.jpg"  alt="Playful">
-							<div class="photo-overlay">
-								<h3>Click to Enlarge</h3>
-								<p>Do you want to play?</p>
-							</div>
-						</div>
+				
+					<div class="column">
+						<img class="demo" src="images/thumbs/thumbnail_6.jpg" onclick="currentSlide(2)" alt="Tropical" width="200px">
 					</div>
-					<!-- END PHOTO CONTAINER 8 -->
-					
-					<!-- PHOTO CONTAINER 9 -->
-					<div class="photo-container">
-						<div class="photo">
-							<img src="./images/thumbs/thumbnail_9.jpg"  alt="Puppy">
-							<div class="photo-overlay">
-								<h3>Click to Enlarge</h3>
-								<p>First time being home!</p>
-							</div>
-						</div>
+				
+					<div class="column">
+						<img class="demo" src="images/thumbs/thumbnail_3.jpg" onclick="currentSlide(3)" alt="Kids" width="200px">
 					</div>
-					<!-- END PHOTO CONTAINER 9 -->
-					
+				
+					<div class="column">
+						<img class="demo" src="images/thumbs/thumbnail_5.jpg" onclick="currentSlide(5)" alt="Treats?" width="200px">
+					</div>
+
+					<div class="column">
+						<img class="demo" src="images/thumbs/thumbnail_7.jpg" onclick="currentSlide(5)" alt="Attention" width="200px">
+					</div>
+					</div>
 				</div>
 			</div>
 		</section>
