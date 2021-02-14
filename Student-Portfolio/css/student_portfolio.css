@@ -2,6 +2,10 @@ body {
     margin: 0%; 
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 h1 {
     text-transform: uppercase; 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;

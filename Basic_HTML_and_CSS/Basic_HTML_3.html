@@ -5,6 +5,13 @@
 		<meta charset="utf-8">
 	</head>
 <body>
+	<script>
+		document.body.classList.add('fade-out');
+		
+		window.addEventListener('DOMContentLoaded', () => {
+			document.body.classList.remove('fade-out');
+		});
+	</script>
 <link rel="stylesheet" type="text/css" href="Basic_CSS_1.css">
 	<h1>This is my heading</h1>
 	<p>Basic paragraph</p>
@@ -12,5 +19,6 @@
 	<div style="color:blue">
 	<p>Div paragraph in blue.</p>
 	</div>
+	
 </body>
 </html>

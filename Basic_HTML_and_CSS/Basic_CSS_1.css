@@ -1,7 +1,7 @@
 h1 {
 	color:#008000;
 	text-align:center;
-	font-size:75px;
+	font-size:8vw;
 	}
 h2 {
 	color:Crimson; 
@@ -12,3 +12,11 @@ p {
 	font-style:Verdana;
 	font-size:50px;
 	}
+body {
+	opacity: 1;
+	transition: 3s opacity;
+}
+body.fade-out {
+	opacity: 0;
+	transition: none;
+}
